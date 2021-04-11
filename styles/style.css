@@ -45,6 +45,7 @@ html {
 }
 
 .equal-sign {
+
   height: 98%;
   color: white;
   grid-row-start: 1;
@@ -63,5 +64,8 @@ html {
   padding: 20px;
 }
 .image{
+  justify-content: center;
   margin: 10px;
+  height: 50px;
+  width: 1;
 }
