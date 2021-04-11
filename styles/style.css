@@ -49,6 +49,8 @@ html {
   color: white;
   grid-row-start: 1;
   grid-row: span 2;
+  text-align: center;
+  justify-content: center;
 }
 
 .calculator-keys {
