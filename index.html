@@ -18,38 +18,40 @@
 <body onload="init();">
     <main class="container-fluid fondo d-flex justify-content-center align-items-center min-vh-100">
         <div class="container-container  calculator">
-            <input type="text" class="calculator-screen" id="resultado" disabled />
+            <div>
+                <input type="text" class="calculator-screen" id="resultado" disabled/>                
+            </div>
             <div class="calculator-keys">
                 <!-- primera fila-->
                 <button type="button" id="siete" class="button">7</button>
-                <button type="button" id="ocho" class="button">8</button>
+                <button type="button" id="ocho"  class="button">8</button>
                 <button type="button" id="nueve" class="button">9</button>
 
                 <button type="button" id="division" class="button operador">&divide;</button>
-                <button type="button" id="signo" class="button operador">+/-</button>
+                <button type="button" id="signo"    class="button operador">+/-</button>
 
                 <!--Segunda fila-->
 
                 <button type="button" id="cuatro" class="button">4</button>
-                <button type="button" id="cinco" class="button">5</button>
-                <button type="button" id="seis" class="button">6</button>
+                <button type="button" id="cinco"  class="button">5</button>
+                <button type="button" id="seis"   class="button">6</button>
 
                 <button type="button" id="multiplicacion" class="operador button operador">&times;</button>
-                <button type="button" id="borrar" class="operador button btn-danger">
+                <button type="button" id="borrar"         class="operador button btn-danger">
                     <img src="images/backspace-solid.svg" class="image">
                 </button>
 
                 <!--Tercera fila-->
-                <button type="button" id="uno" class="button">1</button>
-                <button type="button" id="dos" class="button">2</button>
-                <button type="button" id="tres" class="button">3</button>
+                <button type="button" id="uno"   class="button">1</button>
+                <button type="button" id="dos"   class="button">2</button>
+                <button type="button" id="tres"  class="button">3</button>
                 <button type="button" id="resta" class="button operador">-</button>
                 <button type="button" id="igual" class="equal-sign operator button btn-success">=</button>
                 <!--cuart fila-->
-                <button type="button" id="reset" class="button operador">C</button>
-                <button type="button" id="cero" class="button">0</button>
+                <button type="button" id="reset"   class="button operador">C</button>
+                <button type="button" id="cero"    class="button">0</button>
                 <button type="button" id="decimal" class="button operador">.</button>
-                <button type="button" id="suma" class="button operador">+</button>
+                <button type="button" id="suma"    class="button operador">+</button>
             </div>
             <script src="js/main.js"></script>
         </div>

@@ -18,11 +18,11 @@ html {
 
 .calculator-screen {
   width: 100%;
+  color: white;
   border-radius: 10px;
   height: 80px;
   border: none;
   background-color: #252525;
-  color: white;
   text-align: right;
   font-size: 5rem;
 }

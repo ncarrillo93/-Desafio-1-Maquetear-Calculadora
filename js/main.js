@@ -1,6 +1,6 @@
 var n1;
 var n2;
-var operacion;
+var operacion = document.getElementById("resultado")
 function init() {
     //variables
     var resultado      = document.getElementById('resultado');
@@ -9,6 +9,7 @@ function init() {
     var resta          = document.getElementById('resta');
     var multiplicacion = document.getElementById('multiplicacion');
     var division       = document.getElementById('division');
+    var signo          = document.getElementById('signo');
     var igual          = document.getElementById('igual');
     var uno            = document.getElementById('uno');
     var dos            = document.getElementById('dos');
@@ -23,17 +24,18 @@ function init() {
 }
 
 init();
-//Eventos de click
-uno.onclick    = function (e) { resultado.textContent = resultado.textContent + "1"; console.log(resultado.textContent); }
-dos.onclick    = function (e) { resultado.textContent = resultado.textContent + "2"; console.log(resultado.textContent); }
-tres.onclick   = function (e) { resultado.textContent = resultado.textContent + "3"; console.log(resultado.textContent); }
-cuatro.onclick = function (e) { resultado.textContent = resultado.textContent + "4"; console.log(resultado.textContent); }
-cinco.onclick  = function (e) { resultado.textContent = resultado.textContent + "5"; console.log(resultado.textContent); }
-seis.onclick   = function (e) { resultado.textContent = resultado.textContent + "6"; console.log(resultado.textContent); }
-siete.onclick  = function (e) { resultado.textContent = resultado.textContent + "7"; console.log(resultado.textContent); }
-ocho.onclick   = function (e) { resultado.textContent = resultado.textContent + "8"; console.log(resultado.textContent); }
-nueve.onclick  = function (e) { resultado.textContent = resultado.textContent + "9"; console.log(resultado.textContent); }
-cero.onclick   = function (e) { resultado.textContent = resultado.textContent + "0"; console.log(resultado.textContent); }
+//Eventos de click 
+// var resultado = document.getElementById("resultado")
+uno.onclick    = function (e) { resultado.textContent = resultado.textContent + "1"; console.log(resultado.textContent); resultado.innerHTML = resultado.textContent; }
+dos.onclick    = function (e) { resultado.textContent = resultado.textContent + "2"; console.log(resultado.textContent); resultado.innerHTML = resultado.textContent; }
+tres.onclick   = function (e) { resultado.textContent = resultado.textContent + "3"; console.log(resultado.textContent); resultado.innerHTML = resultado.textContent; }
+cuatro.onclick = function (e) { resultado.textContent = resultado.textContent + "4"; console.log(resultado.textContent); resultado.innerHTML = resultado.textContent; }
+cinco.onclick  = function (e) { resultado.textContent = resultado.textContent + "5"; console.log(resultado.textContent); resultado.innerHTML = resultado.textContent; }
+seis.onclick   = function (e) { resultado.textContent = resultado.textContent + "6"; console.log(resultado.textContent); resultado.innerHTML = resultado.textContent; }
+siete.onclick  = function (e) { resultado.textContent = resultado.textContent + "7"; console.log(resultado.textContent); resultado.innerHTML = resultado.textContent; }
+ocho.onclick   = function (e) { resultado.textContent = resultado.textContent + "8"; console.log(resultado.textContent); resultado.innerHTML = resultado.textContent; }
+nueve.onclick  = function (e) { resultado.textContent = resultado.textContent + "9"; console.log(resultado.textContent); resultado.innerHTML = resultado.textContent; }
+cero.onclick   = function (e) { resultado.textContent = resultado.textContent + "0"; console.log(resultado.textContent); resultado.innerHTML = resultado.textContent; }
 reset.onclick  = function (e) { resetear(); }
 
 suma.onclick = function (e) {
@@ -60,17 +62,20 @@ division.onclick = function (e) {
     console.log(operacion);
     limpiar();
 }
+signo.onclick = function(e){
+    n1 = resultado.textContent;
+    operacion = "signo";
+    limpiar();
+}
 igual.onclick = function (e) {
     n2 = resultado.textContent;
-
     resolver();
 }
-
 function limpiar() {
     resultado.textContent = "";
 }
 function resetear() {
-    resultado.textContent = "0";
+    resultado.textContent = "";
     n1 = 0;
     n2 = 0;
     operacion = "";
@@ -94,6 +99,10 @@ function resolver() {
             break;
         case "/":
             res = parseFloat(n1) / parseFloat(n2);
+            console.log(res);
+            break;
+        case "signo":
+            res = parseFloat(n1)*-1;
             console.log(res);
             break;
     }
